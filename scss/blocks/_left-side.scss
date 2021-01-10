@@ -8,6 +8,23 @@
   overflow-y: auto;
   height: 87vh;
 }
+.left-side__collapse-content {
+  position: relative;
+  z-index: 11;
+  background-color: #fff;
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all .5s ease;
+}
+.active-collapse .left-side__collapse-content {
+  height: 150px;
+  opacity: 1;
+}
+.active-collapse .left-side__collapse-btn::before {
+  transform: rotate(180deg);
+  transition: transform .5s ease;
+}
 .left-side__menu-btn {
   @include btn;
   display: flex;
@@ -71,7 +88,9 @@
 }
 .left-side__collapse-btn::before {
   background-image: url("../img/collapse-icon.svg");
+  transition: transform .5s ease;
 }
+
 .left-side__subscriptions {
   color: #898989;
   font-size: 16px;
@@ -128,6 +147,8 @@
     margin-right: 13px;
   }
 }
+
+
 
  @media only screen and (max-width: 550px) {
   .left-side {

@@ -754,6 +754,31 @@ img {
   height: 87vh;
 }
 
+.left-side__collapse-content {
+  position: relative;
+  z-index: 11;
+  background-color: #fff;
+  height: 0;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.active-collapse .left-side__collapse-content {
+  height: 150px;
+  opacity: 1;
+}
+
+.active-collapse .left-side__collapse-btn::before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
 .left-side__menu-btn {
   margin: 0;
   padding: 0;
@@ -849,6 +874,10 @@ img {
 
 .left-side__collapse-btn::before {
   background-image: url("../img/collapse-icon.svg");
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
 }
 
 .left-side__subscriptions {

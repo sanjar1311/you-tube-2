@@ -76,6 +76,7 @@ var elFirstLineUserTitle = $_('.first-line__user-title');
 var elWatchLater = $_('.left-side__watch-later-btn');
 var elWatchLaterOutput = $_('.js-watch-later-output');
 var elFavouriteList = $_('.js-favourites__list');
+var elCollapseBtn = $_('.left-side__collapse-btn');
 var elVideoItemTemplate = $_('.first-line-template').content;
 
 
@@ -101,6 +102,9 @@ var displayVideo = function(array, output) {
 elMenuBtn.addEventListener('click', function() {
   elMain.classList.toggle('active');
 });
+elCollapseBtn.addEventListener('click', function() {
+  $_('.left-side').classList.toggle('active-collapse');
+})
 
 elSearchForm.addEventListener('submit', function(evt) {
   evt.preventDefault();
