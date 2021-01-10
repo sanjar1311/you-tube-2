@@ -1,0 +1,192 @@
+.left-side {
+  transition: width .3s ease;
+  width: 0;
+  max-width: 230px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 87vh;
+}
+.left-side__menu-btn {
+  @include btn;
+  display: flex;
+  align-items: center;
+  padding: 14px 0 14px 30px;
+  color: #898989;
+  font-size: 16px;
+}
+.left-side__menu-btn::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 13px;
+}
+.left-side__home-btn::before {
+  background-image: url("../img/home.svg");
+}
+
+.left-side__trending-btn::before {
+  background-image: url("../img/tranding.svg");
+}
+
+.left-side__subscriptions-btn::before {
+  background-image: url("../img/subsc.svg");
+}
+
+.left-side__library-btn::before {
+  background-image: url("../img/library.svg");
+}
+
+.left-side__history-btn::before {
+  background-image: url("../img/history.svg");
+}
+
+.left-side__watch-later-btn::before {
+  background-image: url("../img/watch-letar.svg");;
+}
+
+.left-side__favourites-btn::before {
+  background-image: url("../img/favourites.svg");
+}
+
+.left-side__liked-btn::before {
+  background-image: url("../img/liked.svg");
+}
+
+.left-side__music-btn::before {
+  background-image: url("../img/music.svg");
+}
+
+.left-side__games-btn::before {
+  background-image: url("../img/game.svg");
+}
+.left-side__subscriptions-title {
+  text-align: center;
+  font-size: 18px;
+}
+.left-side__collapse-btn::before {
+  background-image: url("../img/collapse-icon.svg");
+}
+.left-side__subscriptions {
+  color: #898989;
+  font-size: 16px;
+  text-decoration: none;
+  @include btn;
+  display: flex;
+  align-items: center;
+  padding: 14px 0 14px 30px;
+  color: #898989;
+  font-size: 16px;
+}
+.left-side__subscribed::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 13px;
+  background-position: center center;
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+}
+
+.js-gussie::before{
+  background-image: url("https://picsum.photos/id/786/100/100");
+}
+.js-nora::before{
+  background-image: url("https://picsum.photos/id/314/100/100");
+}
+.js-belle::before{
+  background-image: url("https://picsum.photos/id/429/100/100");
+}
+.js-eunice::before{
+  background-image: url("https://picsum.photos/id/815/100/100");
+}
+
+.left-side__settings-btn {
+  @include btn;
+  display: flex;
+  align-items: center;
+  padding: 14px 0 14px 30px;
+  color: #898989;
+  font-size: 16px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/settings.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 13px;
+  }
+}
+
+ @media only screen and (max-width: 550px) {
+  .left-side {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100% !important;
+    max-width: 100%;
+    display: flex;
+    background-color: #fff;
+    overflow: hidden;
+    height: 61px;
+    padding: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .left-side__menu-btn {
+    display: none;
+  }
+  .left-side__subscriptions-title, .left-side__subscriptions, .left-side__settings-btn {
+    display: none;
+  }
+  .left-side__home-btn, .left-side__trending-btn, .left-side__subscriptions-btn, .left-side__library-btn {
+    flex-direction: column;
+    display: block;
+    padding: 10px 35px;
+    display: block;
+
+    &::before{
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 5px;
+    }
+  }
+ }
+
+ @media only screen and (max-width: 470px) {
+
+  .left-side__home-btn, .left-side__trending-btn, .left-side__subscriptions-btn, .left-side__library-btn {
+    padding: 10px 25px;
+  }
+ }
+
+ @media only screen and (max-width: 415px) {
+
+  .left-side__home-btn, .left-side__trending-btn, .left-side__subscriptions-btn, .left-side__library-btn {
+    padding: 10px 15px;
+  }
+ }
+
+ @media only screen and (max-width: 350px) {
+
+  .left-side {
+    height: 50px;
+  }
+
+  .left-side__home-btn, .left-side__trending-btn, .left-side__subscriptions-btn, .left-side__library-btn {
+    padding: 5px 8px;
+    font-size: 15px;
+  }
+ }

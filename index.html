@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Tube</title>
+  <link rel="icon" href="img/icon.webp">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <div class="site-header__left-side">
+        <button class="site-header__menu-btn"></button>
+        <a class="site-logo" href="index.html" class="site-logo">
+          <img class="site-logo__img" src="img/logo.svg" width="116" height="25" alt="Site logo">
+        </a>
+      </div>
+
+      <div class="site-header__right-side">
+        <form class="site-header__form" action="https://echo.htmlacademy.ru" autocomplete="off" method="GET">
+          <input class="site-header__input" type="search" placeholder="Search" name="search">
+          <button class="site-header__search-icon"></button>
+        </form>
+        <div class="site-header__buttons">
+          <button class="site-header__videocamera-btn"></button>
+          <button class="site-header__function-btn"></button>
+          <button class="site-header__notification-btn"></button>
+          <button class="site-header__user-menu-btn">
+            <img src="img/user.jpg" width="100" height="100" alt="User image">
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main active">
+    <div class="main__inner">
+      <div class="main__left-side left-side">
+        <button class="left-side__home-btn left-side__menu-btn">Home</button>
+        <button class="left-side__trending-btn left-side__menu-btn">Trending</button>
+        <button class="left-side__subscriptions-btn left-side__menu-btn">Subscriptions</button>
+        <button class="left-side__library-btn left-side__menu-btn">Library</button>
+        <button class="left-side__history-btn left-side__menu-btn">History</button>
+        <button class="left-side__watch-later-btn left-side__menu-btn">Watch later</button>
+        <button class="left-side__favourites-btn left-side__menu-btn">Favourites</button>
+        <button class="left-side__liked-btn left-side__menu-btn">Liked videos</button>
+        <button class="left-side__music-btn left-side__menu-btn">Music</button>
+        <button class="left-side__games-btn left-side__menu-btn">Games</button>
+        <button class="left-side__collapse-btn left-side__menu-btn">Show more</button>
+
+        <h4 class="left-side__subscriptions-title">Subscriptions</h4>
+        <button class="left-side__subscribed left-side__subscriptions js-gussie" >Gussie Singleton</button>
+        <button class="left-side__subscribed left-side__subscriptions js-nora" >Nora Francis</button>
+        <button class="left-side__subscribed left-side__subscriptions js-belle" >Belle Briggs</button>
+        <button class="left-side__subscribed left-side__subscriptions js-eunice" >Eunice Cortez</button>
+
+        <button class="left-side__settings-btn">Settings</button>
+      </div>
+
+      <!-- =============================== -->
+
+      <div class="main__right-side right-side">
+        <div class="first-line">
+          <div class="first-line__inner">
+            <div class="first-line__inner-left">
+              <img class="firs-line__user first-line__subscription-img" src="" width="70" height="70" alt="">
+              <h2 class="first-line__user-title"></h2>
+            </div>
+          </div>
+          <ul class="video js-first-user-videos"></ul>
+        </div>
+        <div class="first-line__watch-latar">
+          <div class="first-line__inner">
+            <div class="first-line__inner-left">
+              <img class="firs-line__user first-line__watch-later-img" src="" width="65" height="65" alt="">
+              <h2 class="first-line__watch-later-title"></h2>
+            </div>
+          </div>
+          <ul class="js-watch-later-output video"></ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- T E M P L A T E -->
+  <template class="first-line-template">
+    <li class="video__item">
+      <button class="video__add" type="button"></button>
+      <a class="video__link" href="#">
+        <div class="video__inner">
+          <img class="video__img" src="" width="250" height="150" alt="rasm">
+          <span class="video__duration"></span>
+        </div>
+        <h4 class="video__title"></h4>
+        <div class="video__info">
+          <span class="video__views"></span>
+          <span class="video__time"></span>
+          <span class="video__author"></span>
+        </div>
+      </a>
+    </li>
+  </template>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>

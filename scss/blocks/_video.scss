@@ -1,0 +1,122 @@
+.video {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  overflow-x: hidden;
+  // height: auto;
+}
+
+.video__item {
+  min-width: 250px;
+  margin-right: 40px;
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover .video__add {
+    opacity: 1;
+  }
+  &:focus .video__add {
+    opacity: 1;
+  }
+}
+
+.video__add {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 5;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 7px;
+  color: #f9f9f9;
+  opacity: 0;
+  transition: opacity .5s ease;
+  width: 35px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("../img/clock.svg");
+  background-position: center center;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+
+.video__link {
+  text-decoration: none;
+  color: #000;
+  z-index: 10;
+}
+
+.video__inner {
+  position: relative;
+}
+
+.video__img {
+  min-width: 250px;
+  min-height: 150px;
+  display: block;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.video__duration {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 47px;
+  height: 24px;
+  background: rgba(0, 0, 0, .7);
+  // opacity: .6;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+}
+
+.video__title {
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.video__info {
+ display: flex;
+ font-size: 13px;
+ color: #C2C2C2;
+}
+
+.video__views {
+  margin-right: 15px;
+}
+
+.video__author {
+ margin-left: auto;
+}
+
+
+
+@media only screen and (max-width: 550px) {
+
+  .video {
+    flex-direction: column;
+    overflow: none;
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+  }
+  .video__item {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    &:last-child {
+      margin-right: auto;
+      margin-bottom: 61px;
+    }
+  }
+}
