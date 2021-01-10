@@ -62,7 +62,7 @@ var videos = [
 
 var watchLater = [];
 
-
+var elSearchForm = $_('.site-header__form');
 var elMenuBtn = $_('.site-header__menu-btn');
 var elMain = $_('.main');
 var elFisrstUserVideos = $_('.js-first-user-videos');
@@ -100,6 +100,10 @@ var displayVideo = function(array, output) {
 
 elMenuBtn.addEventListener('click', function() {
   elMain.classList.toggle('active');
+});
+
+elSearchForm.addEventListener('submit', function(evt) {
+  evt.preventDefault();
 });
 
 var localStorages = JSON.parse(localStorage.getItem('arrey'));
