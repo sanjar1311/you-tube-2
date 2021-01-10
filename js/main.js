@@ -134,14 +134,6 @@ elFisrstUserVideos.addEventListener('click', function(evt) {
   localStorage.setItem('watchL', JSON.stringify(watchLater));
 });
 
-var watchLaterLS = JSON.parse(localStorage.getItem('watchL'));
-if(watchLaterLS){
-  displayVideo(watchLaterLS, elWatchLaterOutput);
-}
-if(localStorage.getItem('watchImg') && localStorage.getItem('watchTitle')) {
-  watchLaterImg.src = localStorage.getItem('watchImg');
-  watchLaterImg.textContent = localStorage.getItem('watchTitle');
-}
 
 
 elWatchLater.addEventListener('click', function() {
@@ -149,8 +141,28 @@ elWatchLater.addEventListener('click', function() {
   watchLaterImg.src = 'img/watch-later.png';
   var watchLaterTitle = $_('.first-line__watch-later-title');
   watchLaterTitle.textContent = 'Watch later';
-  localStorage.setItem('watchImg', 'img/watch-later.png');
-  localStorage.setItem('watchTitle', 'Watch later');
+  // localStorage.setItem('watchImg', 'img/watch-later.png');
+  // localStorage.setItem('watchTitle', 'Watch later');
 
+
+  //     var watchLaterLS = JSON.parse(localStorage.getItem('watchL'));
+  //   if(watchLaterLS){
+  //     displayVideo(watchLaterLS, elWatchLaterOutput);
+  //   }
+  //   if(localStorage.getItem('watchImg') && localStorage.getItem('watchTitle')) {
+  //     watchLaterImg.src = localStorage.getItem('watchImg');
+  //     watchLaterImg.textContent = localStorage.getItem('watchTitle');
+  //   }
   displayVideo(watchLater,elWatchLaterOutput);
+});
+
+elWatchLaterOutput.addEventListener('click', function(evt) {
+
+  for(var i = 0; i < watchLater.length; i++) {
+    if(evt.target.dataset.id === watchLater[i].id) {
+      watchLater.splice(i, 1);
+    }
+  }
+  displayVideo(watchLater,elWatchLaterOutput);
+
 });
