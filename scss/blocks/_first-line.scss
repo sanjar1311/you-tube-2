@@ -18,3 +18,10 @@
 .first-line__watch-later-title {
   margin-left: 25px;
 }
+
+@media only screen and (max-width: 550px) {
+  .first-line__inner-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

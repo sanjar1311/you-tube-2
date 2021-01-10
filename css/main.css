@@ -996,16 +996,16 @@ img {
   .left-side__subscriptions-title, .left-side__subscriptions, .left-side__settings-btn {
     display: none;
   }
-  .left-side__home-btn, .left-side__trending-btn, .left-side__subscriptions-btn, .left-side__library-btn {
+  .left-side__home-btn, .left-side__watch-later-btn, .left-side__subscriptions-btn, .left-side__library-btn {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     display: block;
-    padding: 10px 35px;
+    padding: 10px 0;
     display: block;
   }
-  .left-side__home-btn::before, .left-side__trending-btn::before, .left-side__subscriptions-btn::before, .left-side__library-btn::before {
+  .left-side__home-btn::before, .left-side__watch-later-btn::before, .left-side__subscriptions-btn::before, .left-side__library-btn::before {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5px;
@@ -1082,6 +1082,13 @@ img {
 
 .first-line__watch-later-title {
   margin-left: 25px;
+}
+
+@media only screen and (max-width: 550px) {
+  .first-line__inner-left {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .video {
@@ -1208,6 +1215,9 @@ img {
   .video__item:last-child {
     margin-right: auto;
     margin-bottom: 61px;
+  }
+  .video__add {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */

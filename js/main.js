@@ -141,10 +141,18 @@ elFisrstUserVideos.addEventListener('click', function(evt) {
 
 
 elWatchLater.addEventListener('click', function() {
-  var watchLaterImg = $_('.first-line__watch-later-img');
-  watchLaterImg.src = 'img/watch-later.png';
-  var watchLaterTitle = $_('.first-line__watch-later-title');
-  watchLaterTitle.textContent = 'Watch later';
+  if(watchLater[0]) {
+    var watchLaterImg = $_('.first-line__watch-later-img');
+    watchLaterImg.src = 'img/watch-later.png';
+    var watchLaterTitle = $_('.first-line__watch-later-title');
+    watchLaterTitle.textContent = 'Watch later';
+  }else{
+    var watchLaterImg = $_('.first-line__watch-later-img');
+    watchLaterImg.src = '';
+    var watchLaterTitle = $_('.first-line__watch-later-title');
+    watchLaterTitle.textContent = '';
+  }
+
   // localStorage.setItem('watchImg', 'img/watch-later.png');
   // localStorage.setItem('watchTitle', 'Watch later');
 

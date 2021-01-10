@@ -151,10 +151,10 @@
   .left-side__subscriptions-title, .left-side__subscriptions, .left-side__settings-btn {
     display: none;
   }
-  .left-side__home-btn, .left-side__trending-btn, .left-side__subscriptions-btn, .left-side__library-btn {
+  .left-side__home-btn,.left-side__watch-later-btn, .left-side__subscriptions-btn, .left-side__library-btn {
     flex-direction: column;
     display: block;
-    padding: 10px 35px;
+    padding: 10px 0;
     display: block;
 
     &::before{
